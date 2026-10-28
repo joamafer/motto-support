@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — Motto</title>
+  <meta name="description" content="Help with Motto: feathers, Motty's tail, reminders, purchases and iCloud.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="images/app-icon.png" type="image/png">
+  <link rel="alternate" hreflang="es" href="support-es.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --paper: #F3E6CF; --card: #FBF4E6; --ink: #3B2A1E; --ink-soft: #6B5A4C;
+  --terracotta: #C8693F; --sage: #5F7D63; --rose: #B98A8A; --line: rgba(59, 42, 30, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #211A15; --card: #2C241D; --ink: #F1E6D6; --ink-soft: #BDAE9C;
+          --terracotta: #E08A5F; --sage: #9DBA9F; --line: rgba(241, 230, 214, 0.12); }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+       background: var(--paper); color: var(--ink); line-height: 1.65; font-size: 1.02rem; }
+h1, h2, .logo span { font-family: "Bellefair", Georgia, serif; font-weight: 400; }
+a { color: var(--terracotta); }
+.container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 85%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; padding-bottom: 12px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-size: 1.6rem; }
+.logo img { width: 34px; height: 34px; border-radius: 8px; }
+.lang { font-size: 0.95rem; text-decoration: none; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); }
+header { text-align: center; padding: 48px 0 24px; }
+header img { width: 150px; height: auto; }
+header h1 { font-size: 2.6rem; line-height: 1.1; margin-top: 8px; }
+header .tagline { color: var(--sage); font-size: 1.1rem; margin-top: 6px; }
+.updated { color: var(--ink-soft); font-size: 0.9rem; margin-top: 10px; }
+.summary { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--terracotta);
+           border-radius: 14px; padding: 18px 20px; margin: 16px 0 8px; }
+section { margin: 34px 0; }
+h2 { font-size: 1.7rem; margin-bottom: 8px; color: var(--ink); }
+p + p, p + ul, ul + p { margin-top: 10px; }
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+.closing { text-align: center; font-family: "Bellefair", Georgia, serif; font-size: 1.4rem; color: var(--sage); margin: 48px 0 24px; }
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; text-align: center; color: var(--ink-soft); font-size: 0.9rem; }
+footer a { margin: 0 8px; }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right a.page { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
+.nav-right a.page[aria-current] { color: var(--terracotta); }
+.contact { text-align: center; }
+.contact a.mail { display: inline-block; margin-top: 10px; padding: 10px 22px; border-radius: 999px; background: var(--terracotta);
+                  color: #fff; text-decoration: none; font-weight: 600; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 10px 0; }
+summary { cursor: pointer; padding: 14px 18px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--terracotta); font-weight: 400; font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details .answer { padding: 0 18px 16px; color: var(--ink); }
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.tip { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.tip .icon { font-size: 1.6rem; }
+.tip h3 { font-size: 1.05rem; margin: 6px 0 4px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; text-align: center; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 8px; }
+.stat .value { font-family: "Bellefair", Georgia, serif; font-size: 2rem; color: var(--terracotta); }
+.stat .label { color: var(--ink-soft); font-size: 0.9rem; }
+@media (max-width: 520px) { header h1 { font-size: 2.1rem; } header img { width: 120px; } }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <span class="logo"><img src="images/app-icon.png" alt=""><span>Motto</span></span>
+      <div class="nav-right">
+        <a class="page" href="support.html" aria-current="page">Support</a> <a class="page" href="privacy-policy.html">Privacy</a>
+        <a class="lang" href="support-es.html" hreflang="es">Español</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <header>
+      <img src="images/motty.png" alt="">
+      <h1>Support</h1>
+      <p class="tagline">Everything you need to make the most of your daily Motto.</p>
+      
+    </header>
+    <div class="summary"><div class="contact"><strong>Need help?</strong><br>Write to us about anything to do with Motto.<br><a class="mail" href="mailto:feedbackmotto@gmail.com">feedbackmotto@gmail.com</a></div></div>
+      <section>
+        <h2>Frequently asked questions</h2>
+        <details><summary>How does Motto work?</summary><div class="answer">Every day brings a new Motto: a motivational quote with its own painted scene. Open the app and tap today's card to unlock it. Today's Motto is always free.</div></details><details><summary>I missed a day. Can I still read it?</summary><div class="answer">Yes. Days you missed stay in the Calendar. Use one feather to unlock any of them. Feathers also let you unlock a day ahead if you can't wait.</div></details><details><summary>What are feathers and how do I get more?</summary><div class="answer">Feathers are Motty's magic: each one unlocks one day. You get 3 as a welcome gift. After that, you can buy packs of 10, 25 or 40 in the Feather shop (Settings → Feather shop). They are one-off purchases, not a subscription, and they never expire.</div></details><details><summary>What is Motty's tail?</summary><div class="answer">Motty starts without a tail. Unlock every day of a month and that month's feather is added to his tail, each one painted with its own motif. Any year counts, in any order. With all twelve, Motty fans his full tail, you can share your "My Motty" postcard and use his full tail as the app icon. Tap Motty at the top of the Calendar to see your tail.</div></details><details><summary>How do I set the daily reminder?</summary><div class="answer">Go to Settings and turn on Daily reminder, then choose the time. If nothing arrives, check that notifications are allowed for Motto in your iPhone's Settings.</div></details><details><summary>How do I save or share a Motto?</summary><div class="answer">Tap the heart on a card to save it; you'll find it in Settings → Saved Mottos. Tap the share button to send it as a painted postcard.</div></details><details><summary>How do I restore my feathers on a new device?</summary><div class="answer">Your days and feathers are kept in your iCloud. Sign in with the same Apple ID and iCloud, open Motto and they come back on their own. If a purchase seems missing, tap Restore purchases in Settings.</div></details><details><summary>Why can't Motto unlock a day right now?</summary><div class="answer">To unlock, Motto checks today's date online, so you need a connection. If your device's date is set wrong, Motto will ask you to fix it. Days you already unlocked can be read offline.</div></details><details><summary>I used the previous version of Motto. Is my progress still there?</summary><div class="answer">Yes. The new Motto brings over the days you unlocked, your feathers and your reminder time from the previous version the first time it opens.</div></details><details><summary>Is Motto available in Spanish?</summary><div class="answer">Yes. Motto is in English and Spanish and follows your iPhone's language. To change it, go to Settings → Motto → Language on your iPhone.</div></details><details><summary>Is my data collected?</summary><div class="answer">No personal data. There are no accounts, ads, analytics or tracking. Your progress lives on your device and in your own iCloud. The only exception is purchases, which are confirmed with RevenueCat using a random ID that isn't linked to you. Read the <a href="privacy-policy.html">Privacy Policy</a> for details.</div></details>
+      </section>
+      <section>
+        <h2>Quick tips</h2>
+        <div class="tips"><div class="tip"><div class="icon">🌅</div><h3>A moment a day</h3><p>Make opening Motto part of your morning. The reminder can nudge you at the time that suits you.</p></div><div class="tip"><div class="icon">🪶</div><h3>Feathers for catching up</h3><p>Missed a few days? Feathers unlock them whenever you like, so no Motto is ever lost.</p></div><div class="tip"><div class="icon">🦚</div><h3>Grow Motty's tail</h3><p>Complete a month to earn its feather. The Calendar shows how close you are to this month's.</p></div></div>
+      </section>
+      <section>
+        <h2>Motto at a glance</h2>
+        <div class="stats"><div class="stat"><div class="value">366</div><div class="label">Mottos</div></div><div class="stat"><div class="value">12</div><div class="label">Tail feathers</div></div><div class="stat"><div class="value">2</div><div class="label">Languages</div></div><div class="stat"><div class="value">0</div><div class="label">Ads</div></div></div>
+      </section>
+    <p class="closing">One Motto a day keeps the mood on track.</p>
+  </main>
+  <footer>
+    <div class="container">
+      <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a> · <a href="mailto:feedbackmotto@gmail.com">Contact</a>
+      <p style="margin-top:8px">&copy; 2026 Motto</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -47,6 +47,26 @@ li { margin: 4px 0; }
 .closing { text-align: center; font-family: "Bellefair", Georgia, serif; font-size: 1.4rem; color: var(--sage); margin: 48px 0 24px; }
 footer { border-top: 1px solid var(--line); padding: 24px 0 40px; text-align: center; color: var(--ink-soft); font-size: 0.9rem; }
 footer a { margin: 0 8px; }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right a.page { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; }
+.nav-right a.page[aria-current] { color: var(--terracotta); }
+.contact { text-align: center; }
+.contact a.mail { display: inline-block; margin-top: 10px; padding: 10px 22px; border-radius: 999px; background: var(--terracotta);
+                  color: #fff; text-decoration: none; font-weight: 600; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 10px 0; }
+summary { cursor: pointer; padding: 14px 18px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--terracotta); font-weight: 400; font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details .answer { padding: 0 18px 16px; color: var(--ink); }
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.tip { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.tip .icon { font-size: 1.6rem; }
+.tip h3 { font-size: 1.05rem; margin: 6px 0 4px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; text-align: center; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 8px; }
+.stat .value { font-family: "Bellefair", Georgia, serif; font-size: 2rem; color: var(--terracotta); }
+.stat .label { color: var(--ink-soft); font-size: 0.9rem; }
 @media (max-width: 520px) { header h1 { font-size: 2.1rem; } header img { width: 120px; } }
 </style>
 </head>
@@ -54,7 +74,10 @@ footer a { margin: 0 8px; }
   <nav>
     <div class="container">
       <span class="logo"><img src="images/app-icon.png" alt=""><span>Motto</span></span>
-      <a class="lang" href="privacy-policy-es.html" hreflang="es">Español</a>
+      <div class="nav-right">
+        <a class="page" href="support.html">Support</a> <a class="page" href="privacy-policy.html" aria-current="page">Privacy</a>
+        <a class="lang" href="privacy-policy-es.html" hreflang="es">Español</a>
+      </div>
     </div>
   </nav>
   <main class="container">
@@ -125,7 +148,7 @@ footer a { margin: 0 8px; }
   </main>
   <footer>
     <div class="container">
-      <a href="mailto:feedbackmotto@gmail.com">Contact</a>·<a href="privacy-policy-es.html">Español</a>
+      <a href="support.html">Support</a> · <a href="privacy-policy.html">Privacy</a> · <a href="mailto:feedbackmotto@gmail.com">Contact</a>
       <p style="margin-top:8px">&copy; 2026 Motto</p>
     </div>
   </footer>
